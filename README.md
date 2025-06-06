@@ -77,7 +77,7 @@ model = RFDETR(model="models/rb_trafficsign.pth")
 model.export()
 ```
 
-Run the export function to create a .trt file.
+Run the export script to create a .trt file.
 ```bash
 PYTHONPATH=$(pwd) python examples/export_rfdetr.py
 ```
