@@ -65,3 +65,35 @@ Deployed for ultra-fast inference on Jetson devices
 Used with built-in postprocessing for bounding boxes and class predictions
 
 The model works seamlessly with KINEVA’s modular interface—just specify the model path and config, and you're ready to run inference.
+
+## Export + Inference
+```python
+from kineva import RFDETR
+
+#initialize model
+model = RFDETR(model="models/rb_trafficsign.pth")
+
+#export model to trt
+model.export()
+```
+
+Run the export function to create a .trt file.
+```bash
+PYTHONPATH=$(pwd) python examples/export_rfdetr.py
+```
+
+Then you can do an inference.
+```python
+from kineva import RFDETR
+
+myclasses = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
+
+#initialize model
+model = RFDETR(model="models/rf-detr-base.trt", classes=myclasses)
+
+#run inference on image
+final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", threshold=0.5)
+
+#draw detection
+model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/output_rfdetr.jpg")
+```

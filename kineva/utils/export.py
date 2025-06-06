@@ -11,7 +11,6 @@ import torch
 import os
 from ..models.kineva.core import EdgeYOLO
 import numpy as np
-import onnx
 
 class ANOMALY_wrapper(torch.nn.Module):
     def __init__(self, model):
@@ -49,6 +48,7 @@ def convert_to_trt(model, output_path, img_size=640, mode="anomaly"):
         os.system("trtexec --onnx="+dummy_path+" --saveEngine="+output_path+" --fp16")
         #remove onnx
         os.remove(dummy_path)
+
     elif mode == "rfdetr":
         dummy_dir=".dummy_dir"
         model.export(output_dir=dummy_dir)
@@ -58,6 +58,7 @@ def convert_to_trt(model, output_path, img_size=640, mode="anomaly"):
         #remove onnx
         os.remove(dummy_path)
         os.rmdir(dummy_dir)
+        
     elif mode == "kineva":
         exp = EdgeYOLO(weights=model)
         modelc = exp.model
@@ -82,4 +83,3 @@ def convert_to_trt(model, output_path, img_size=640, mode="anomaly"):
         os.system("trtexec --onnx="+dummy_path+" --saveEngine="+output_path+" --fp16")
         #remove onnx
         os.remove(dummy_path)
-        

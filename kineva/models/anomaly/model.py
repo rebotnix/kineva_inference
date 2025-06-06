@@ -12,7 +12,6 @@ from typing import Any, Dict, List, Optional, Union
 from kineva.utils.trt import *
 from kineva.utils.processing import *
 from kineva.utils.export import *
-
 import numpy as np
 from kineva.models.anomaly.core import *
 
