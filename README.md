@@ -1,17 +1,17 @@
 # KINEVA Inference
 
-The **KINEVA Inference** provides a modular, GPU-accelerated framework for deploying deep learning models using PyTorch, TensorRT, and torchvision. It supports multiple architectures (e.g., YOLO-based, transformer-based, anomaly detection) and includes utilities for model conversion, inference, and result postprocessing.
+**KINEVA Inference** is a high-performance, GPU-accelerated solution designed for deploying deep learning models on **NVIDIA Jetson** devices. Built for speed and efficiency, KINEVA enables lightning-fast inference at the edge, with seamless integration into real-time systems.
+
+Whether you're running object detection, or anomaly detection, KINEVA provides everything needed to convert, optimize, and deploy models for ultra-fast execution on Jetson hardware.
 
 ---
 
 ## 🚀 Features
 
-- Unified interface for multiple model types
-- GPU-accelerated inference with TensorRT
-- Postprocessing utilities including NMS, rescaling, and filtering
-- Built-in support for batch inference and custom thresholds
-- Easy integration with Python projects
-
+- Optimized for real-time inference on NVIDIA Jetson devices
+- Modular design supporting multiple model architectures
+- Built-in conversion tools for high-speed TensorRT deployment
+-  
 ---
 
 ## 📦 Requirements
@@ -45,3 +45,32 @@ Clone the repository:
 ```bash
 git clone https://github.com/rebotnix/kineva_inference.git
 cd kineva_inference
+
+## 🧠 Model Support: RFDetr
+KINEVA Inference includes built-in support for the RFDetr object detection model—an efficient, transformer-based detector designed for high accuracy with edge deployment in mind.
+
+🔗 Download Pretrained RFDetr Models
+Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via the official Hugging Face repository:
+
+👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
+
+You can download the model manually or use the huggingface_hub library:
+
+```bash
+pip install huggingface_hub
+
+```python
+from huggingface_hub import hf_hub_download
+
+# Example: download the RFDetr ONNX model
+model_path = hf_hub_download(repo_id="rebotnix/rfdetr", filename="rfdetr_dynamic.onnx")
+⚙️ Integration with KINEVA
+Once downloaded, RFDetr models can be:
+
+Converted to TensorRT using KINEVA's model conversion tools
+
+Deployed for ultra-fast inference on Jetson devices
+
+Used with built-in postprocessing for bounding boxes and class predictions
+
+The model works seamlessly with KINEVA’s modular interface—just specify the model path and config, and you're ready to run inference.
