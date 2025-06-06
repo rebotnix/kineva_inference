@@ -45,6 +45,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/rebotnix/kineva_inference.git
 cd kineva_inference
+```
 
 ## 🧠 Model Support: RFDetr
 KINEVA Inference includes built-in support for the RFDetr object detection model—an efficient, transformer-based detector designed for high accuracy with edge deployment in mind.
@@ -58,13 +59,16 @@ You can download the model manually or use the huggingface_hub library:
 
 ```bash
 pip install huggingface_hub
+```
 
 ```python
 from huggingface_hub import hf_hub_download
 
 # Example: download the RFDetr ONNX model
 model_path = hf_hub_download(repo_id="rebotnix/rfdetr", filename="rfdetr_dynamic.onnx")
-⚙️ Integration with KINEVA
+```
+
+## ⚙️ Integration with KINEVA
 Once downloaded, RFDetr models can be:
 
 Converted to TensorRT using KINEVA's model conversion tools
