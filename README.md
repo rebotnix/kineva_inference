@@ -89,7 +89,7 @@ from kineva import RFDETR
 myclasses = ['trafficsign']
 
 #initialize model
-model = RFDETR(model="models/rb_trafficsign.trt", classes=myclasses)
+model = RFDETR(model="models/rb_trafficsign.trt", classes="data/rb_trafficsign.json")
 
 #run inference on image
 final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", threshold=0.5)
