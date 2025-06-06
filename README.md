@@ -97,3 +97,8 @@ final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", thresho
 #draw detection
 model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/output_rfdetr.jpg")
 ```
+
+And run the script with
+```bash
+PYTHONPATH=$(pwd) python examples/test_rfdetr.py
+```
