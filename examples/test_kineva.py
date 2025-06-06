@@ -1,7 +1,7 @@
 from kineva import KINEVA
 
 #initialize model
-model = KINEVA(model="models/kineva_coco.trt")
+model = KINEVA(model="models/kineva_coco.trt", classes="./data/coco_classes_rfdetr.json")
 
 #run inference on image
 final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", threshold=0.35)

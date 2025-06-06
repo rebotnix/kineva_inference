@@ -13,16 +13,15 @@ from kineva.utils.trt import *
 from kineva.utils.processing import *
 from kineva.utils.export import *
 import cv2
+import json
 import sys
 import os
 sys.path.append(os.path.abspath('./core'))
 from .core import RFDETRBase
 
-coco_classes = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
-
 class RFDETR():
 
-    def __init__(self, model: Union[str, Path], img_size = 560, classes = coco_classes):
+    def __init__(self, model: Union[str, Path], img_size = 560, classes = "./data/coco_classes_rfdetr.json"):
         """
         Initialize an RFDETR model.
 
@@ -34,9 +33,10 @@ class RFDETR():
 
         Examples:
             >>> from kineva import RFDETR
-            >>> model = RFDETR("metauas_256.trt", "reference.jpg")
+            >>> model = RFDETR("models/rf-detr-base.trt")
         """
-        self.classes = classes
+        with open(classes, 'r') as f:
+            self.classes = json.load(f)
         path = Path(model if isinstance(model, (str, Path)) else "")
         self.img_size = img_size
         self.path = str(path)
