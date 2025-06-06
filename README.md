@@ -18,9 +18,9 @@ Whether you're running object detection, or anomaly detection, KINEVA provides e
 
 Before installing the SDK, ensure the following prerequisites are installed **with GPU support**:
 
-- [PyTorch](https://pytorch.org/) (compatible with your CUDA version)
-- [torchvision](https://pytorch.org/vision/stable/index.html)
-- [TensorRT](https://developer.nvidia.com/tensorrt)
+- [PyTorch](https://github.com/pytorch/pytorch) (compatible with your CUDA version)
+- [torchvision](https://github.com/pytorch/vision)
+- [TensorRT](https://github.com/NVIDIA/TensorRT)
 
 > ✅ **Important:**  
 > The `trtexec` tool from TensorRT must be installed and accessible in your terminal (i.e., it should be in your system's `PATH`).
