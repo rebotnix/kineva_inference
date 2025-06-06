@@ -51,22 +51,9 @@ cd kineva_inference
 KINEVA Inference includes built-in support for the RFDetr object detection model—an efficient, transformer-based detector designed for high accuracy with edge deployment in mind.
 
 🔗 Download Pretrained RFDetr Models
-Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via the official Hugging Face repository:
+Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
 
 👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
-
-You can download the model manually or use the huggingface_hub library:
-
-```bash
-pip install huggingface_hub
-```
-
-```python
-from huggingface_hub import hf_hub_download
-
-# Example: download the RFDetr ONNX model
-model_path = hf_hub_download(repo_id="rebotnix/rfdetr", filename="rfdetr_dynamic.onnx")
-```
 
 ## ⚙️ Integration with KINEVA
 Once downloaded, RFDetr models can be:
