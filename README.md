@@ -1,6 +1,6 @@
-# KINEVA Inference SDK
+# KINEVA Inference
 
-The **KINEVA Inference SDK** provides a modular, GPU-accelerated framework for deploying deep learning models using PyTorch, TensorRT, and torchvision. It supports multiple architectures (e.g., YOLO-based, transformer-based, anomaly detection) and includes utilities for model conversion, inference, and result postprocessing.
+The **KINEVA Inference** provides a modular, GPU-accelerated framework for deploying deep learning models using PyTorch, TensorRT, and torchvision. It supports multiple architectures (e.g., YOLO-based, transformer-based, anomaly detection) and includes utilities for model conversion, inference, and result postprocessing.
 
 ---
 
@@ -43,5 +43,5 @@ All additional Python dependencies are listed in `requirements.txt`.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-org/kineva_inference_sdk.git
-cd kineva_inference_sdk
+git clone https://github.com/rebotnix/kineva_inference.git
+cd kineva_inference
