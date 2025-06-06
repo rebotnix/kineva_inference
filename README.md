@@ -11,7 +11,7 @@ Whether you're running object detection, or anomaly detection, KINEVA provides e
 - Optimized for real-time inference on NVIDIA Jetson devices
 - Modular design supporting multiple model architectures
 - Built-in conversion tools for high-speed TensorRT deployment
--  
+
 ---
 
 ## 📦 Requirements
