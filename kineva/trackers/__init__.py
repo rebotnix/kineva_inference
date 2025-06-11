@@ -7,7 +7,4 @@ For license details, see: https://www.gnu.org/licenses/agpl-3.0.html
 Project website: https://rebotnix.com
 """
 
-__version__ = "1.0.0"
-
-from kineva.models import ANOMALY, ULTRALYTICS, RFDETR, KINEVA
-from kineva.trackers import BYTE_TRACKER
+from .byte_tracker import BYTE_TRACKER
