@@ -106,6 +106,12 @@ Used with built-in postprocessing for bounding boxes and class predictions
 The model works seamlessly with KINEVA’s modular interface—just specify the model path and config, and you're ready to run inference.
 
 ## Export + Inference
+Run the export script to create a .trt file.
+```bash
+PYTHONPATH=$(pwd) python examples/export_rfdetr.py
+```
+
+Edit the file examples/export_rfdetr.py if you want to change the pth file:
 ```python
 from kineva import RFDETR
 
@@ -116,12 +122,14 @@ model = RFDETR(model="models/rb_coco.pth")
 model.export()
 ```
 
-Run the export script to create a .trt file.
+Now you run an inference with:
+
 ```bash
-PYTHONPATH=$(pwd) python examples/export_rfdetr.py
+PYTHONPATH=$(pwd) python examples/test_rfdetr.py
 ```
 
-Then you can do an inference.
+Edit the file examples/test_rfdetr.py if you want to change the trt model file:
+
 ```python
 from kineva import RFDETR
 
@@ -135,9 +143,4 @@ final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", thresho
 
 #draw detection
 model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/output_rfdetr.jpg")
-```
-
-And run the script with
-```bash
-PYTHONPATH=$(pwd) python examples/test_rfdetr.py
 ```
