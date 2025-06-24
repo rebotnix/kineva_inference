@@ -43,8 +43,32 @@ All additional Python dependencies are listed in `requirements.txt`.
 Clone the repository:
 
 ```bash
+#download repository
 git clone https://github.com/rebotnix/kineva_inference.git
 cd kineva_inference
+#create virtual env
+virtualenv -p python3.10 venv
+#load venv
+source venv/bin/activate
+```
+
+Install Pytorch + Torchvision + Tensorrt:
+
+```bash
+#install pytorch
+wget https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/6ef/f643c0a7acda9/torch-2.7.0-cp310-cp310-linux_aarch64.whl#sha256=6eff643c0a7acda92734cc798338f733ff35c7df1a4434576f5ff7c66fc97319
+pip install torch-2.7.0-cp310-cp310-linux_aarch64.whl
+#install tiorchvision
+wget https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/daa/bff3a07259968/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl#sha256=daabff3a0725996886b92e4b5dd143f5750ef4b181b5c7d01371a9185e8f0402
+pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
+# add tensorrt to venv (if present in system)
+cp -r /usr/lib/python3.10/dist-packages/tensorrt venv/lib/python3.10/site-packages/
+```
+
+Now install requirements:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ## 🧠 Model Support: RFDetr
@@ -54,6 +78,9 @@ KINEVA Inference includes built-in support for the RFDetr object detection model
 Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
 
 👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
+
+Add the downloaded model file to the models folder.
+
 
 ## ⚙️ Integration with KINEVA
 Once downloaded, RFDetr models can be:
