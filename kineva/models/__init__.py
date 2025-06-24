@@ -8,6 +8,5 @@ Project website: https://rebotnix.com
 """
 
 from .anomaly import ANOMALY
-from .ultralytics import ULTRALYTICS
 from .rfdetr import RFDETR
 from .kineva import KINEVA

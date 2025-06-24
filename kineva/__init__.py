@@ -9,5 +9,5 @@ Project website: https://rebotnix.com
 
 __version__ = "1.0.0"
 
-from kineva.models import ANOMALY, ULTRALYTICS, RFDETR, KINEVA
+from kineva.models import ANOMALY, RFDETR, KINEVA
 from kineva.trackers import BYTE_TRACKER
