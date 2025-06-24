@@ -21,3 +21,8 @@ segmentation-models-pytorch@git+https://github.com/ragavsachdeva/segmentation_mo
 supervision
 pydantic
 peft
+onnxsim
+onnxruntime
+onnx_graphsurgeon
+polygraphy
+
