@@ -59,11 +59,11 @@ source venv/bin/activate
 Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 6.1**:
 
 ```bash
-#install pytorch
+#install torch
 wget https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/6ef/f643c0a7acda9/torch-2.7.0-cp310-cp310-linux_aarch64.whl#sha256=6eff643c0a7acda92734cc798338f733ff35c7df1a4434576f5ff7c66fc97319
 pip install torch-2.7.0-cp310-cp310-linux_aarch64.whl
 
-#install tiorchvision
+#install torchvision
 wget https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/daa/bff3a07259968/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl#sha256=daabff3a0725996886b92e4b5dd143f5750ef4b181b5c7d01371a9185e8f0402
 pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 
