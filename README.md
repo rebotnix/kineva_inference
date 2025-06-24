@@ -144,3 +144,13 @@ final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", thresho
 #draw detection
 model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/output_rfdetr.jpg")
 ```
+
+## Contact
+
+📫 For commercial use or re-training this model support, or dataset access, contact:
+
+**REBOTNIX**
+✉️ Email: [communicate@rebotnix.com](mailto:communicate@rebotnix.com)
+🌐 Website: [https://rebotnix.com](https://rebotnix.com)
+
+---
