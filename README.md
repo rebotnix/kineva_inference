@@ -17,6 +17,7 @@ Whether you're running object detection, or anomaly detection, KINEVA provides e
 ## 📦 Requirements
 
 Before installing the SDK, ensure the following prerequisites are installed **with GPU support**:
+(If you run on jetpack 6.1 you can follow the steps in the Installation section)
 
 - [PyTorch](https://github.com/pytorch/pytorch) (compatible with your CUDA version)
 - [torchvision](https://github.com/pytorch/vision)
