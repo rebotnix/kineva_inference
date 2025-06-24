@@ -147,7 +147,7 @@ model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/outpu
 
 ## Contact
 
-📫 For commercial use or re-training this model support, or dataset access, contact:
+📫 For commercial use or or other questions please contact us here:
 
 **REBOTNIX**
 ✉️ Email: [communicate@rebotnix.com](mailto:communicate@rebotnix.com)
