@@ -141,6 +141,8 @@ The model works seamlessly with KINEVA’s modular interface—just specify the 
 ## EXAMPLES
 
 ### Download a RFDETR model for export
+Exchange the placeholder YOUR_HF_TOKEN with your own huggingface token.
+
 ```bash
 mkdir models
 cd models
