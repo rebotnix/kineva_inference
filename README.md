@@ -30,6 +30,7 @@ From **object detection** and **defect inspection** to **traffic sign recognitio
 | [rb_aircraft](https://huggingface.co/rebotnix/rb_aircraft)      | Aircraft detection and classification for aviation or surveillance use cases on aerial images                      | ![rb\_licenseplate](assets/rb_aircraft.jpg)   
 | [rb_vehicle](https://huggingface.co/rebotnix/rb_vehicle)      | Specialized vehicle detection in traffic or parking scenarios on aerial images                      | ![rb\_licenseplate](assets/rb_vehicle.jpg)    
 | [rb_ship](https://huggingface.co/rebotnix/rb_ship)      | Ship and vessel detection in ports, harbors, or maritime surveillance on aerial images                      | ![rb\_licenseplate](assets/rb_ship.jpg)    
+
 💡 Need a custom model? Contact us to train, optimize, and deploy your AI models through the KINEVA pipeline.
 
 🔗 Download Pretrained RFDetr Models
