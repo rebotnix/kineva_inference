@@ -20,7 +20,7 @@ KINEVA ships with a growing collection of **ready-to-use, production-grade AI mo
 
 | Model Name             | Description                                                                                       | Example Output                                              |
 | ---------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `rb_coco`              | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
+| [rb_coco](https://huggingface.co/rebotnix/rb_coco)              | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
 | `rb_trafficsign`       | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
 | `rb_productInspection` | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
 | `rb_licenseplate`      | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
