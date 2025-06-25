@@ -117,7 +117,6 @@ To run the SDK the following prerequisites need to be installed **with GPU suppo
 > export PATH=$PATH:/usr/src/tensorrt/bin  # adjust path if needed
 > ```
 
-All additional Python dependencies are listed in `requirements.txt`.
 ---
 
 
@@ -136,23 +135,22 @@ The model works seamlessly with KINEVA’s modular interface—just specify the 
 
 ## EXAMPLES
 
+### Export RFDETR model to TRT
 Run the export script to create a .trt file.
 ```bash
 PYTHONPATH=$(pwd) python examples/export_rfdetr.py
 ```
+Edit the file examples/export_rfdetr.py if you want to change the pth file.
 
-Edit the file examples/export_rfdetr.py if you want to change the pth file:
-```python
-from kineva import RFDETR
-
-#initialize model
-model = RFDETR(model="models/rb_coco.pth")
-
-#export model to trt
-model.export()
+### Export KINEVA model to TRT
+Run the export script to create a .trt file.
+```bash
+PYTHONPATH=$(pwd) python examples/export_kineva.py
 ```
+Edit the file examples/export_kineva.py if you want to change the pth file.
 
-Now you run an inference with:
+
+### Run inference with RFDETR TRT
 
 ```bash
 PYTHONPATH=$(pwd) python examples/test_rfdetr.py
@@ -160,20 +158,13 @@ PYTHONPATH=$(pwd) python examples/test_rfdetr.py
 
 Edit the file examples/test_rfdetr.py if you want to change the trt model file:
 
-```python
-from kineva import RFDETR
 
-myclasses = ['trafficsign']
+### Run inference with KINEVA TRT
 
-#initialize model
-model = RFDETR(model="models/rb_trafficsign.trt", classes="data/rb_trafficsign.json")
-
-#run inference on image
-final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", threshold=0.5)
-
-#draw detection
-model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/output_rfdetr.jpg")
+```bash
+PYTHONPATH=$(pwd) python examples/test_kineva.py
 ```
+
 
 ## CONTACT
 
