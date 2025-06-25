@@ -38,14 +38,6 @@ Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our off
 
 👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
 
-Example to download the rb_coco model. Please insert your own token after getting access to repo.
-```bash
-mkdir models
-cd models
-curl -L -o rb_coco.pth -H "Authorization: Bearer YOUR_HF_TOKEN" "https://huggingface.co/rebotnix/rb_coco/resolve/main/rb_coco.pth?download=true"
-cd ..
-```
-
 ---
 
 ## 📥 INSTALLATION
@@ -147,6 +139,14 @@ The model works seamlessly with KINEVA’s modular interface—just specify the 
 ---
 
 ## EXAMPLES
+
+### Download a RFDETR model for export
+```bash
+mkdir models
+cd models
+curl -L -o rb_coco.pth -H "Authorization: Bearer YOUR_HF_TOKEN" "https://huggingface.co/rebotnix/rb_coco/resolve/main/rb_coco.pth?download=true"
+cd ..
+```
 
 ### Export RFDETR model to TRT
 Run the export script to create a .trt file.
