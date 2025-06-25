@@ -51,8 +51,9 @@ cd ..
 ## 📥 INSTALLATION
 
 Install first neccessary packages if not installed yet (**CMake 3.22 or higher is required.**):
+
 ```bash
-sudo apt install libopenblas-base libopenblas-dev cmake;
+sudo apt install libopenblas-base libopenblas-dev cmake curl
 ```
 
 Clone the repository:
@@ -69,34 +70,38 @@ virtualenv -p python3 venv
 source venv/bin/activate
 ```
 
-Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 5.1 or 5.2**:
+Install steps **Jetpack 5.1 or 5.2**:
 
 ```bash
 #install torch
-wget https://pypi.jetson-ai-lab.dev/jp5/cu114/+f/4c1/d7a5d0ba92527/torch-2.2.0-cp38-cp38-linux_aarch64.whl#sha256=4c1d7a5d0ba92527c163ce9da74a2bdccce47541ef09a14d186e413a47337385
+wget https://docs.rebotnix.com/downloads/wheels/torch-2.2.0-cp38-cp38-linux_aarch64.whl
 pip install torch-2.2.0-cp38-cp38-linux_aarch64.whl
 
 #install torchvision
-wget https://pypi.jetson-ai-lab.dev/jp5/cu114/+f/12c/2173bcd5255bd/torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl#sha256=12c2173bcd5255bddad13047c573de24e0ce2ea47374c48ee8fb88466e021d2a
+wget https://docs.rebotnix.com/downloads/wheels/torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl
 pip install torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl
 
-# add tensorrt to venv (if present in system)
-cp -r /usr/lib/python3.8/dist-packages/tensorrt venv/lib/python3.8/site-packages/
+# install tensorrt
+mkdir -p venv/lib/python3.8/site-packages/tensorrt
+wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/__init__.py
+wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/tensorrt.so
 ```
 
 Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 6.1**:
 
 ```bash
 #install torch
-wget https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/6ef/f643c0a7acda9/torch-2.7.0-cp310-cp310-linux_aarch64.whl#sha256=6eff643c0a7acda92734cc798338f733ff35c7df1a4434576f5ff7c66fc97319
+wget https://docs.rebotnix.com/downloads/wheels/torch-2.7.0-cp310-cp310-linux_aarch64.whl
 pip install torch-2.7.0-cp310-cp310-linux_aarch64.whl
 
 #install torchvision
-wget https://pypi.jetson-ai-lab.dev/jp6/cu126/+f/daa/bff3a07259968/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl#sha256=daabff3a0725996886b92e4b5dd143f5750ef4b181b5c7d01371a9185e8f0402
+wget https://docs.rebotnix.com/downloads/wheels/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 
-# add tensorrt to venv (if present in system)
-cp -r /usr/lib/python3.10/dist-packages/tensorrt venv/lib/python3.10/site-packages/
+# install tensorrt
+mkdir -p venv/lib/python3.10/site-packages/tensorrt
+wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_310/__init__.py
+wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_310/tensorrt.so
 ```
 
 Now install requirements:

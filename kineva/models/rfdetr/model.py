@@ -50,7 +50,7 @@ class RFDETR():
             self.stds = [0.229, 0.224, 0.225]
         elif str(path).endswith("pth"):
             self.input = "pth"
-            self.model = RFDETRBase(pretrain_weights=str(path))
+            self.model = RFDETRBase(pretrain_weights=str(path), num_classes=len(self.classes))
         else:
             print("Sorry. We only support .trt or .pth files.")
 
