@@ -14,7 +14,34 @@ Whether you're running object detection, or anomaly detection, KINEVA provides e
 
 ---
 
-## 📦 Requirements
+## 🧠 PREBUILT MODELS
+
+KINEVA ships with a growing collection of **ready-to-use, production-grade AI models** — all fine-tuned for real-world edge applications. Whether you're working in robotics, smart cities, industrial automation, or retail analytics, we've got you covered.
+
+| Model Name             | Description                                                                                       | Example Output                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `rb_coco`              | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
+| `rb_trafficsign`       | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
+| `rb_productInspection` | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
+| `rb_licenseplate`      | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
+| *...and many more*     | More models coming soon ... |                                                             |
+
+
+🔗 Download Pretrained RFDetr Models
+Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
+
+👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
+
+Example to download the rb_coco model. Please insert your own token after getting access to repo.
+```bash
+mkdir models
+cd models
+curl -L -o rb_coco.pth -H "Authorization: Bearer YOUR_HF_TOKEN" "https://huggingface.co/rebotnix/rb_coco/resolve/main/rb_coco.pth?download=true"
+cd ..
+```
+---
+
+## 📦 REQUIREMENTS
 
 Before installing the SDK, ensure the following prerequisites are installed **with GPU support**:
 
@@ -45,7 +72,7 @@ All additional Python dependencies are listed in `requirements.txt`.
 
 ---
 
-## 📥 Installation
+## 📥 INSTALLATION
 
 Clone the repository:
 
@@ -97,34 +124,10 @@ Now install requirements:
 ```bash
 pip install -r requirements.txt
 ```
-
-## 🧠 Model Support: RFDetr
-KINEVA ships with a growing collection of **ready-to-use, production-grade AI models** — all fine-tuned for real-world edge applications. Whether you're working in robotics, smart cities, industrial automation, or retail analytics, we've got you covered.
-
-| Model Name             | Description                                                                                       | Example Output                                              |
-| ---------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `rb_coco`              | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
-| `rb_trafficsign`       | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
-| `rb_productInspection` | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
-| `rb_licenseplate`      | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
-| *...and many more*     | More models coming soon for gesture recognition, face analysis, industrial object detection, etc. |                                                             |
+---
 
 
-🔗 Download Pretrained RFDetr Models
-Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
-
-👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
-
-Example to download the rb_coco model. Please insert your own token after getting access to repo.
-```bash
-mkdir models
-cd models
-curl -L -o rb_coco.pth -H "Authorization: Bearer YOUR_HF_TOKEN" "https://huggingface.co/rebotnix/rb_coco/resolve/main/rb_coco.pth?download=true"
-cd ..
-```
-
-
-## ⚙️ Integration with KINEVA
+## ⚙️ INTEGRATION
 Once downloaded, RFDetr models can be:
 
 Converted to TensorRT using KINEVA's model conversion tools
@@ -135,7 +138,10 @@ Used with built-in postprocessing for bounding boxes and class predictions
 
 The model works seamlessly with KINEVA’s modular interface—just specify the model path and config, and you're ready to run inference.
 
-## Export + Inference
+---
+
+## EXAMPLES
+
 Run the export script to create a .trt file.
 ```bash
 PYTHONPATH=$(pwd) python examples/export_rfdetr.py
@@ -175,12 +181,10 @@ final_boxes, final_scores, final_labels = model.detect("images/bus.jpg", thresho
 model.draw(final_boxes, final_scores, final_labels, output_path="./outputs/output_rfdetr.jpg")
 ```
 
-## Contact
+## CONTACT
 
 📫 For commercial use or or other questions please contact us here:
 
 ✉️ Email: [communicate@rebotnix.com](mailto:communicate@rebotnix.com)
 
 🌐 Website: [https://rebotnix.com](https://rebotnix.com)
-
-
