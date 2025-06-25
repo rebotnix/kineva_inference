@@ -70,7 +70,7 @@ virtualenv -p python3 venv
 source venv/bin/activate
 ```
 
-Install steps **Jetpack 5.1 or 5.2**:
+Install steps for **Jetpack 5.1 or 5.2**:
 
 ```bash
 #install torch
@@ -87,7 +87,7 @@ wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/down
 wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/tensorrt.so
 ```
 
-Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 6.1**:
+Install steps for **Jetpack 6.1**:
 
 ```bash
 #install torch
