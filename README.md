@@ -20,16 +20,16 @@ KINEVA offers a curated suite of **8 high-performance, production-ready AI model
 
 From **object detection** and **defect inspection** to **traffic sign recognition** and **license plate localization**, each model is fully optimized for real-time inference on **NVIDIA Jetson** hardware.
 
-| Model Name             | Description                                                                                       | Example Output                                              |
-| ---------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [rb_coco](https://huggingface.co/rebotnix/rb_coco)              | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
-| [rb_trafficsign](https://huggingface.co/rebotnix/rb_trafficsign)         | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
-| [rb_productInspection](https://huggingface.co/rebotnix/rb_productInspection) | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
-| [rb_licenseplate](https://huggingface.co/rebotnix/rb_licenseplate)      | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
-| [rb_graffiti](https://huggingface.co/rebotnix/rb_graffiti)      | Detection of graffiti and visual vandalism in urban environments                       | ![rb\_licenseplate](assets/rb_graffiti.jpg)   
-| [rb_aircraft](https://huggingface.co/rebotnix/rb_aircraft)      | Aircraft detection and classification for aviation or surveillance use cases on aerial images                      | ![rb\_licenseplate](assets/rb_aircraft.jpg)   
-| [rb_vehicle](https://huggingface.co/rebotnix/rb_vehicle)      | Specialized vehicle detection in traffic or parking scenarios on aerial images                      | ![rb\_licenseplate](assets/rb_vehicle.jpg)    
-| [rb_ship](https://huggingface.co/rebotnix/rb_ship)      | Ship and vessel detection in ports, harbors, or maritime surveillance on aerial images                      | ![rb\_licenseplate](assets/rb_ship.jpg)    
+| Model Name             | Model Type | Detection Type | Description                                                                                       | Example Output                                              |
+| ---------------------- | --- | --- |------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| [rb_coco](https://huggingface.co/rebotnix/rb_coco)        |  RF-DETR  |  Object Detection     | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
+| [rb_trafficsign](https://huggingface.co/rebotnix/rb_trafficsign)      |  RF-DETR  |  Object Detection   | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
+| [rb_productInspection](https://huggingface.co/rebotnix/rb_productInspection) |  RF-DETR  |  Object Detection | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
+| [rb_licenseplate](https://huggingface.co/rebotnix/rb_licenseplate)   |  RF-DETR  |  Object Detection   | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
+| [rb_graffiti](https://huggingface.co/rebotnix/rb_graffiti)  |  RF-DETR  |  Object Detection    | Detection of graffiti and visual vandalism in urban environments                       | ![rb\_licenseplate](assets/rb_graffiti.jpg)   
+| [rb_aircraft](https://huggingface.co/rebotnix/rb_aircraft)   |  RF-DETR  |  Object Detection   | Aircraft detection and classification for aviation or surveillance use cases on aerial images                      | ![rb\_licenseplate](assets/rb_aircraft.jpg)   
+| [rb_vehicle](https://huggingface.co/rebotnix/rb_vehicle)  |  RF-DETR  |  Object Detection    | Specialized vehicle detection in traffic or parking scenarios on aerial images                      | ![rb\_licenseplate](assets/rb_vehicle.jpg)    
+| [rb_ship](https://huggingface.co/rebotnix/rb_ship)  |  RF-DETR  |  Object Detection    | Ship and vessel detection in ports, harbors, or maritime surveillance on aerial images                      | ![rb\_licenseplate](assets/rb_ship.jpg)    
 
 💡 Need a custom model? Contact us to train, optimize, and deploy your AI models through the KINEVA pipeline.
 
