@@ -99,7 +99,16 @@ pip install -r requirements.txt
 ```
 
 ## 🧠 Model Support: RFDetr
-KINEVA Inference includes built-in support for the RFDetr object detection model—an efficient, transformer-based detector designed for high accuracy with edge deployment in mind.
+KINEVA ships with a growing collection of **ready-to-use, production-grade AI models** — all fine-tuned for real-world edge applications. Whether you're working in robotics, smart cities, industrial automation, or retail analytics, we've got you covered.
+
+| Model Name             | Description                                                                                       | Example Output                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `rb_coco`              | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
+| `rb_trafficsign`       | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
+| `rb_productInspection` | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
+| `rb_licenseplate`      | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
+| *...and many more*     | More models coming soon for gesture recognition, face analysis, industrial object detection, etc. |                                                             |
+
 
 🔗 Download Pretrained RFDetr Models
 Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
