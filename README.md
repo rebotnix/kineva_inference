@@ -39,40 +39,15 @@ cd models
 curl -L -o rb_coco.pth -H "Authorization: Bearer YOUR_HF_TOKEN" "https://huggingface.co/rebotnix/rb_coco/resolve/main/rb_coco.pth?download=true"
 cd ..
 ```
+
 ---
 
-## 📦 REQUIREMENTS
-
-Before installing the SDK, ensure the following prerequisites are installed **with GPU support**:
+## 📥 INSTALLATION
 
 Install first neccessary packages if not installed yet (**CMake 3.22 or higher is required.**):
 ```bash
 sudo apt install libopenblas-base libopenblas-dev cmake;
 ```
-
-(If you run on **jetpack 5.1, 5.2 or 6.1** you can follow the steps in the Installation section)
-
-- [PyTorch](https://github.com/pytorch/pytorch) (compatible with your CUDA version)
-- [torchvision](https://github.com/pytorch/vision)
-- [TensorRT](https://github.com/NVIDIA/TensorRT)
-
-> ✅ **Important:**  
-> The `trtexec` tool from TensorRT must be installed and accessible in your terminal (i.e., it should be in your system's `PATH`).
->
-> You can verify with:
-> ```bash
-> trtexec --help
-> ```
-> If not found, you may need to add it:
-> ```bash
-> export PATH=$PATH:/usr/src/tensorrt/bin  # adjust path if needed
-> ```
-
-All additional Python dependencies are listed in `requirements.txt`.
-
----
-
-## 📥 INSTALLATION
 
 Clone the repository:
 
@@ -103,7 +78,6 @@ pip install torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl
 cp -r /usr/lib/python3.8/dist-packages/tensorrt venv/lib/python3.8/site-packages/
 ```
 
-
 Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 6.1**:
 
 ```bash
@@ -124,6 +98,26 @@ Now install requirements:
 ```bash
 pip install -r requirements.txt
 ```
+
+To run the SDK the following prerequisites need to be installed **with GPU support**:
+
+- [PyTorch](https://github.com/pytorch/pytorch) (compatible with your CUDA version)
+- [torchvision](https://github.com/pytorch/vision)
+- [TensorRT](https://github.com/NVIDIA/TensorRT)
+
+> ✅ **Important:**  
+> The `trtexec` tool from TensorRT must be installed and accessible in your terminal (i.e., it should be in your system's `PATH`).
+>
+> You can verify with:
+> ```bash
+> trtexec --help
+> ```
+> If not found, you may need to add it:
+> ```bash
+> export PATH=$PATH:/usr/src/tensorrt/bin  # adjust path if needed
+> ```
+
+All additional Python dependencies are listed in `requirements.txt`.
 ---
 
 
