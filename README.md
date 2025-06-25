@@ -50,11 +50,13 @@ cd ..
 
 ## 📥 INSTALLATION
 
-Install first neccessary packages if not installed yet (**CMake 3.22 or higher is required.**):
+Install first neccessary packages if not installed yet:
 
 ```bash
 sudo apt install libopenblas-base libopenblas-dev cmake curl
 ```
+
+On Jetpack 5.1 and 5.2 we reccomend **CMake 3.22.**
 
 Clone the repository:
 
