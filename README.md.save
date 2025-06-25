@@ -18,12 +18,12 @@ Whether you're running object detection, or anomaly detection, KINEVA provides e
 
 Before installing the SDK, ensure the following prerequisites are installed **with GPU support**:
 
-Install first neccessary packages if not installed yet (**CMake 3.22 or higher is required.**):
+Run in command line to install neccessary packages:
 ```bash
-sudo apt install libopenblas-base libopenblas-dev cmake;
+sudo apt install libopenblas-base libopenblas-dev cmake
 ```
 
-(If you run on **jetpack 5.1, 5.2 or 6.1** you can follow the steps in the Installation section)
+(If you run on jetpack 5.1, 5.2 or 6.1 you can follow the steps in the Installation section)
 
 - [PyTorch](https://github.com/pytorch/pytorch) (compatible with your CUDA version)
 - [torchvision](https://github.com/pytorch/vision)
@@ -55,26 +55,13 @@ git clone https://github.com/rebotnix/kineva_inference.git
 cd kineva_inference
 
 #create virtual env
-virtualenv -p python3 venv
+virtualenv -p python3.10 venv
 
 #load venv
 source venv/bin/activate
 ```
 
-Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 5.1 or 5.2**:
 
-```bash
-#install torch
-wget https://pypi.jetson-ai-lab.dev/jp5/cu114/+f/4c1/d7a5d0ba92527/torch-2.2.0-cp38-cp38-linux_aarch64.whl#sha256=4c1d7a5d0ba92527c163ce9da74a2bdccce47541ef09a14d186e413a47337385
-pip install torch-2.2.0-cp38-cp38-linux_aarch64.whl
-
-#install torchvision
-wget https://pypi.jetson-ai-lab.dev/jp5/cu114/+f/12c/2173bcd5255bd/torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl#sha256=12c2173bcd5255bddad13047c573de24e0ce2ea47374c48ee8fb88466e021d2a
-pip install torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl
-
-# add tensorrt to venv (if present in system)
-cp -r /usr/lib/python3.8/dist-packages/tensorrt venv/lib/python3.8/site-packages/
-```
 
 
 Install steps for Pytorch + Torchvision + Tensorrt on **jetpack 6.1**:

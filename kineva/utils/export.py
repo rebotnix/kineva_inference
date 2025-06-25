@@ -11,6 +11,7 @@ import torch
 import os
 from ..models.kineva.core import EdgeYOLO
 import numpy as np
+import sys
 
 class ANOMALY_wrapper(torch.nn.Module):
     def __init__(self, model):
@@ -51,7 +52,11 @@ def convert_to_trt(model, output_path, img_size=640, mode="anomaly"):
 
     elif mode == "rfdetr":
         dummy_dir=".dummy_dir"
-        model.export(output_dir=dummy_dir)
+        if sys.version_info < (3, 9):
+          opset_version=16
+        else:
+          opset_version=17
+        model.export(output_dir=dummy_dir, opset_version=opset_version)
         dummy_path = os.path.join(dummy_dir,"inference_model.onnx")
         #create trt
         os.system("trtexec --onnx="+dummy_path+" --saveEngine="+output_path+" --fp16")

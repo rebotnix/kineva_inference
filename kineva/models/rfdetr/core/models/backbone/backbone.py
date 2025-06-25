@@ -30,6 +30,8 @@ from .base import BackboneBase
 from .projector import MultiScaleProjector
 from .dinov2 import DinoV2
 
+from typing import Tuple
+
 __all__ = ["Backbone"]
 
 
@@ -46,7 +48,7 @@ class Backbone(BackboneBase):
                  use_cls_token: bool = False,
                  freeze_encoder: bool = False,
                  layer_norm: bool = False,
-                 target_shape: tuple[int, int] = (640, 640),
+                 target_shape: Tuple[int, int] = (640, 640),
                  rms_norm: bool = False,
                  backbone_lora: bool = False,
                  gradient_checkpointing: bool = False,
