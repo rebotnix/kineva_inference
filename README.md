@@ -33,8 +33,8 @@ From **object detection** and **defect inspection** to **traffic sign recognitio
 
 💡 Need a custom model? Contact us to train, optimize, and deploy your AI models through the KINEVA pipeline.
 
-🔗 Download Pretrained RFDetr Models
-Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
+🔗 Download Pretrained KINEVA Models
+Pretrained KINEVA models, optimized for NVIDIA Jetson, are available via our official Hugging Face repository:
 
 👉 [https://huggingface.co/rebotnix](https://huggingface.co/rebotnix)
 
@@ -126,7 +126,7 @@ To run the SDK the following prerequisites need to be installed **with GPU suppo
 
 
 ## ⚙️ Integration
-Once downloaded, RFDetr models can be:
+Once downloaded, KINEVA models can be:
 
 Converted to TensorRT using KINEVA's model conversion tools
 
