@@ -178,8 +178,11 @@ def torch2onnx2trt(module,
             ctx.mark_outputs(outputs_flat, output_names)
 
     # set max workspace size
-    config.max_workspace_size = max_workspace_size
-
+    #config.max_workspace_size = max_workspace_size
+    if hasattr(config, 'set_memory_pool_limit'):
+        config.set_memory_pool_limit(trt.MemoryPoolType.WORKSPACE, max_workspace_size)
+    else:
+        config.max_workspace_size = max_workspace_size
     if fp16_mode:
         config.set_flag(trt.BuilderFlag.FP16)
 
@@ -223,7 +226,13 @@ def torch2onnx2trt(module,
 
     # BUILD ENGINE
 
-    engine = builder.build_engine(network, config)
+    #engine = builder.build_engine(network, config)
+    if hasattr(builder, "build_engine"):
+        engine = builder.build_engine(network, config)  # TRT <= 8.5
+    else:
+        serialized_engine = builder.build_serialized_network(network, config)  # TRT >= 8.6
+        runtime = trt.Runtime(trt.Logger(trt.Logger.WARNING))
+        engine = runtime.deserialize_cuda_engine(serialized_engine)
 
     try:
         module_trt = TRTModule(engine, input_names, output_names, input_flattener=input_flattener,

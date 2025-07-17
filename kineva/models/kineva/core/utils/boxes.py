@@ -45,9 +45,13 @@ def filter_box(output, scale_range):
     return output[keep]
 
 
-def postprocess(prediction, num_classes, conf_thre=0.7, nms_thre=0.45, class_agnostic=False, obj_conf_enabled=True):
+def postprocess(prediction, num_classes, conf_thre=0.05, nms_thre=0.45, class_agnostic=False, obj_conf_enabled=True):
     # print(prediction.shape)
-
+    
+    # Handle tuple output from detection modules
+    if isinstance(prediction, tuple):
+        prediction = prediction[0]  # Use first element if tuple
+    
     box_corner = prediction.new(prediction.shape)
     box_corner[:, :, 0] = prediction[:, :, 0] - prediction[:, :, 2] / 2
     box_corner[:, :, 1] = prediction[:, :, 1] - prediction[:, :, 3] / 2

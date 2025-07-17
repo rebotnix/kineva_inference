@@ -61,6 +61,10 @@ class Detector(EdgeYOLO):
         return outs
     
     def decode_outputs(self, outputs):
+        # Handle tuple output from detection modules
+        if isinstance(outputs, tuple):
+            outputs = outputs[0]  # Use first element if tuple
+            
         dtype = outputs.type()
         grids = []
         strides = []

@@ -7,6 +7,4 @@ For license details, see: https://www.gnu.org/licenses/agpl-3.0.html
 Project website: https://rebotnix.com
 """
 
-from .anomaly import ANOMALY
-from .rfdetr import RFDETR
 from .kineva import KINEVA

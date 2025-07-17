@@ -73,11 +73,11 @@ def train_single(
         trainer.train()
 
 
-def launch(train_settings_file):
-    assert os.path.isfile(train_settings_file), f"settings file {train_settings_file} does not exist!"
+def launch(args):
+    assert os.path.isfile(args.cfg), f"settings file {args.cfg} does not exist!"
     assert torch.cuda.is_available(), "cuda not available, please double check your device status!"
 
-    params = load_train_settings(train_settings_file)
+    params = load_train_settings(args.cfg)
     init_logger()
     if isinstance(params["device"], int):
         params["device"] = [params["device"]]

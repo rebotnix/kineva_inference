@@ -9,6 +9,6 @@ Project website: https://rebotnix.com
 
 __version__ = "1.0.0"
 
-from kineva.models import ANOMALY, RFDETR, KINEVA
+from kineva.models import KINEVA
 from kineva.trackers import BYTE_TRACKER
 from kineva.industrial import MODBUS

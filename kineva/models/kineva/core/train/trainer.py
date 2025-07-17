@@ -36,7 +36,6 @@ import time
 
 from torch.nn.parallel import DistributedDataParallel as DDP
 
-
 class Trainer(EdgeYOLO):
 
     dataloader: MaskDataLoader = None
@@ -47,6 +46,9 @@ class Trainer(EdgeYOLO):
     dataset_cfg: dict
 
     def __init__(self, params: dict, rank=0):
+        with open("/opt/8tbdrive/experiments/install_test/build_fastapi/train_log.json", "w") as flog:  # 'a' for append, 'w' to overwrite
+          flog.write("#loggin trained weights\n")
+          flog.close()
         with NoPrint(rank):
             nc = None
             names = None
@@ -468,6 +470,11 @@ class Trainer(EdgeYOLO):
                     if self.params["save_checkpoint_for_each_epoch"]:
                         ckpt_name = f"epoch_{str(self.now_epoch + 1).zfill(len(str(self.max_epoch)))}.pth"
                         self.save_ckpt(ckpt_name)
+                        print("LOGGING!")
+                        print(osp.join(self.params["output_dir"], ckpt_name))
+                        with open("/opt/8tbdrive/experiments/install_test/build_fastapi/train_log.json", "a") as flog:  # 'a' for append, 'w' to overwrite
+                          flog.write(osp.join(self.params["output_dir"], ckpt_name)+"\n")
+                          flog.close()
 
                 if self.is_distributed:
                     all_reduce_norm(self.model, self.world_size)
