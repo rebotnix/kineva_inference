@@ -2,7 +2,6 @@ pycuda
 numpy<2.0
 opencv-python
 Pillow
-kornia
 loguru
 thop
 pyyaml
@@ -25,4 +24,4 @@ onnxsim
 onnxruntime
 onnx_graphsurgeon
 polygraphy
-
+git+https://github.com/NVIDIA-AI-IOT/torch2trt.git#egg=torch2trt

@@ -12,7 +12,7 @@ from warnings import warn
 # add a logger for pyModbusTCP.server
 logger = logging.getLogger('pyModbusTCP.server')
 
-print("REBOTNIX MODBUS SERVER INIT!")
+#print("REBOTNIX MODBUS SERVER INIT!")
 
 class DataBank:
     """ Data space class with thread safe access functions """

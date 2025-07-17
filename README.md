@@ -68,34 +68,34 @@ Install steps for **Jetpack 5.1 or 5.2**:
 
 ```bash
 #install torch
-wget https://docs.rebotnix.com/downloads/wheels/torch-2.2.0-cp38-cp38-linux_aarch64.whl
+wget https://docs.rebotnix.com/downloads/wheels/torch-2.2.0-cp38-cp38-linux_aarch64.whl --no-check-certificate
 pip install torch-2.2.0-cp38-cp38-linux_aarch64.whl
 
 #install torchvision
-wget https://docs.rebotnix.com/downloads/wheels/torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl
+wget https://docs.rebotnix.com/downloads/wheels/torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl --no-check-certificate
 pip install torchvision-0.17.2+c1d70fe-cp38-cp38-linux_aarch64.whl
 
 # install tensorrt
 mkdir -p venv/lib/python3.8/site-packages/tensorrt
-wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/__init__.py
-wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/tensorrt.so
+wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/__init__.py --no-check-certificate
+wget -P venv/lib/python3.8/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_38/tensorrt.so --no-check-certificate
 ```
 
 Install steps for **Jetpack 6.1**:
 
 ```bash
 #install torch
-wget https://docs.rebotnix.com/downloads/wheels/torch-2.7.0-cp310-cp310-linux_aarch64.whl
+wget https://docs.rebotnix.com/downloads/wheels/torch-2.7.0-cp310-cp310-linux_aarch64.whl --no-check-certificate
 pip install torch-2.7.0-cp310-cp310-linux_aarch64.whl
 
 #install torchvision
-wget https://docs.rebotnix.com/downloads/wheels/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
+wget https://docs.rebotnix.com/downloads/wheels/torchvision-0.22.0-cp310-cp310-linux_aarch64.whl --no-check-certificate
 pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 
 # install tensorrt
 mkdir -p venv/lib/python3.10/site-packages/tensorrt
-wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_310/__init__.py
-wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_310/tensorrt.so
+wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_310/__init__.py --no-check-certificate
+wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/downloads/wheels/tensorrt_310/tensorrt.so --no-check-certificate
 ```
 
 Now install requirements:
@@ -140,7 +140,7 @@ The model works seamlessly with KINEVA’s modular interface—just specify the 
 
 ## EXAMPLES
 
-### Download a RFDETR model for export
+### Download a KINEVA model for export
 Exchange the placeholder YOUR_HF_TOKEN with your own huggingface token.
 
 ```bash
@@ -150,13 +150,6 @@ curl -L -o rb_coco.pth -H "Authorization: Bearer YOUR_HF_TOKEN" "https://hugging
 cd ..
 ```
 
-### Export RFDETR model to TRT
-Run the export script to create a .trt file.
-```bash
-PYTHONPATH=$(pwd) python examples/export_rfdetr.py
-```
-Edit the file examples/export_rfdetr.py if you want to change the pth file.
-
 ### Export KINEVA model to TRT
 Run the export script to create a .trt file.
 ```bash
@@ -165,20 +158,12 @@ PYTHONPATH=$(pwd) python examples/export_kineva.py
 Edit the file examples/export_kineva.py if you want to change the pth file.
 
 
-### Run inference with RFDETR TRT
-
-```bash
-PYTHONPATH=$(pwd) python examples/test_rfdetr.py
-```
-
-Edit the file examples/test_rfdetr.py if you want to change the trt model file:
-
-
 ### Run inference with KINEVA TRT
 
 ```bash
 PYTHONPATH=$(pwd) python examples/test_kineva.py
 ```
+Edit the file examples/test_kineva.py if you want to change the pth/pt file.
 
 
 ## CONTACT
