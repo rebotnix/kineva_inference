@@ -11,7 +11,7 @@ import cv2
 import time
 import numpy as np
 from PIL import Image
-import kornia as K
+#import kornia as K
 import torch
 import torchvision
 import torchvision.transforms.functional as F
