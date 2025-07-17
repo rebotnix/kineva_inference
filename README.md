@@ -14,7 +14,7 @@ Whether you're running object detection, or anomaly detection, KINEVA provides e
 
 ---
 
-## 🧠 PREBUILT MODELS
+## 🧠 Prebuilt Models
 
 KINEVA offers a curated suite of **8 high-performance, production-ready AI models**, purpose-built for edge applications. These models are available under a **commercial licensing model**, giving you the flexibility to integrate best-in-class AI into your product without the burden of training from scratch.
 
@@ -40,7 +40,7 @@ Pretrained RFDetr models, optimized for NVIDIA Jetson, are available via our off
 
 ---
 
-## 📥 INSTALLATION
+## 📥 Installation
 
 Install first neccessary packages if not installed yet:
 
@@ -125,7 +125,7 @@ To run the SDK the following prerequisites need to be installed **with GPU suppo
 ---
 
 
-## ⚙️ INTEGRATION
+## ⚙️ Integration
 Once downloaded, RFDetr models can be:
 
 Converted to TensorRT using KINEVA's model conversion tools
@@ -138,7 +138,7 @@ The model works seamlessly with KINEVA’s modular interface—just specify the 
 
 ---
 
-## EXAMPLES
+## Examples
 
 ### Download a KINEVA model for export
 Exchange the placeholder YOUR_HF_TOKEN with your own huggingface token.
@@ -166,7 +166,7 @@ PYTHONPATH=$(pwd) python examples/test_kineva.py
 Edit the file examples/test_kineva.py if you want to change the pth/pt file.
 
 
-## CONTACT
+## Contact
 
 📫 For commercial use or or other questions please contact us here:
 
