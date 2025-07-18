@@ -22,23 +22,29 @@ From **object detection** and **defect inspection** to **traffic sign recognitio
 
 KINEVA uses two different network architectures: AF and KD. The only difference between AF and KD is the backbone. The difference between the silver and gold versions lies in the number of parameters the model was trained with, as well as differences in the model architecture and input height. For testing we also trained some models with detectron, just for comparision. KINEVA uses two network architectures: AF and KD. The only difference between them is the backbone. The difference between silver and gold models lies in the number of parameters, the model architecture, and the input height used during training.
 
-KINEVA GOLD AF has 80 million parameters.
-
+KINEVA GOLD AF has 80 million parameters.  
 KINEVA SILVER AF has 9.52 Million parameters.
 
 
-| Model Name             | Model Type | Detection Type | Description                                                                                       | Example Output                                              |
-| ---------------------- | --- | --- |------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [rb_coco](https://huggingface.co/rebotnix/rb_coco)        |  KINEVA GOLD AF  |  Object Detection     | Object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)        
-| [rb_coco](https://huggingface.co/rebotnix/rb_coco)        |  KINEVA SILVER AF  |  Object Detection     | Object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)   
-|
-| [rb_trafficsign](https://huggingface.co/rebotnix/rb_trafficsign)      |  RF-DETR  |  Object Detection   | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
-| [rb_productInspection](https://huggingface.co/rebotnix/rb_productInspection) |  RF-DETR  |  Object Detection | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
-| [rb_licenseplate](https://huggingface.co/rebotnix/rb_licenseplate)   |  RF-DETR  |  Object Detection   | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
-| [rb_graffiti](https://huggingface.co/rebotnix/rb_graffiti)  |  RF-DETR  |  Object Detection    | Detection of graffiti and visual vandalism in urban environments                       | ![rb\_licenseplate](assets/rb_graffiti.jpg)   
-| [rb_aircraft](https://huggingface.co/rebotnix/rb_aircraft)   |  RF-DETR  |  Object Detection   | Aircraft detection and classification for aviation or surveillance use cases on aerial images                      | ![rb\_licenseplate](assets/rb_aircraft.jpg)   
-| [rb_vehicle](https://huggingface.co/rebotnix/rb_vehicle)  |  RF-DETR  |  Object Detection    | Specialized vehicle detection in traffic or parking scenarios on aerial images                      | ![rb\_licenseplate](assets/rb_vehicle.jpg)    
-| [rb_ship](https://huggingface.co/rebotnix/rb_ship)  |  RF-DETR  |  Object Detection    | Ship and vessel detection in ports, harbors, or maritime surveillance on aerial images                      | ![rb\_licenseplate](assets/rb_ship.jpg)    
+## KINEVA Models
+
+| Model Name                                                                 | Model Type        | Detection Type    | Description                                                                                       | Example Output                                |
+|----------------------------------------------------------------------------|-------------------|-------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| [rb_coco](https://huggingface.co/rebotnix/rb_coco)                         | KINEVA GOLD AF    | Object Detection  | Object detection based on COCO classes (people, vehicles, etc.)                                   | [<img src="assets/rb_coco.jpg" alt="rb_coco" width="200"/>](https://huggingface.co/rebotnix/rb_coco) |
+| [rb_coco](https://huggingface.co/rebotnix/rb_coco)                         | KINEVA SILVER AF  | Object Detection  | Object detection based on COCO classes (people, vehicles, etc.)                                   | [<img src="assets/rb_coco.jpg" alt="rb_coco" width="200"/>](https://huggingface.co/rebotnix/rb_coco) |
+
+## RF-DETR Models
+
+| Model Name                                                                 | Model Type        | Detection Type    | Description                                                                                       | Example Output                                |
+|----------------------------------------------------------------------------|-------------------|-------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| [rb_trafficsign](https://huggingface.co/rebotnix/rb_trafficsign)          | RF-DETR           | Object Detection  | Detection and classification of traffic signs                                                     | [<img src="assets/rb_trafficsign.jpg" alt="rb_trafficsign" width="200"/>](https://huggingface.co/rebotnix/rb_trafficsign)  |
+| [rb_productInspection](https://huggingface.co/rebotnix/rb_productInspection) | RF-DETR         | Object Detection  | Visual quality control and anomaly detection in product assembly lines                            | [<img src="assets/rb_productInspection.jpg" alt="rb_productInspection" width="200"/>](https://huggingface.co/rebotnix/rb_productInspection) |
+| [rb_licenseplate](https://huggingface.co/rebotnix/rb_licenseplate)        | RF-DETR           | Object Detection  | License plate detection and OCR-ready localization                                                | [<img src="assets/rb_licenseplate.jpg" alt="rb_licenseplate" width="200"/>](https://huggingface.co/rebotnix/rb_licenseplate) |
+| [rb_graffiti](https://huggingface.co/rebotnix/rb_graffiti)                | RF-DETR           | Object Detection  | Detection of graffiti and visual vandalism in urban environments                                  | [<img src="assets/rb_graffiti.jpg" alt="rb_graffiti" width="200"/>](https://huggingface.co/rebotnix/rb_graffiti)        |
+| [rb_aircraft](https://huggingface.co/rebotnix/rb_aircraft)                | RF-DETR           | Object Detection  | Aircraft detection and classification for aviation or surveillance use cases on aerial images     | [<img src="assets/rb_aircraft.jpg" alt="rb_aircraft" width="200"/>](https://huggingface.co/rebotnix/rb_aircraft)        |
+| [rb_vehicle](https://huggingface.co/rebotnix/rb_vehicle)                  | RF-DETR           | Object Detection  | Specialized vehicle detection in traffic or parking scenarios on aerial images                    | [<img src="assets/rb_vehicle.jpg" alt="rb_vehicle" width="200"/>](https://huggingface.co/rebotnix/rb_vehicle)          |
+| [rb_ship](https://huggingface.co/rebotnix/rb_ship)                        | RF-DETR           | Object Detection  | Ship and vessel detection in ports, harbors, or maritime surveillance on aerial images            | [<img src="assets/rb_ship.jpg" alt="rb_ship" width="200"/>](https://huggingface.co/rebotnix/rb_ship)                |              |
+
 
 💡 Need a custom model? Contact us to train, optimize, and deploy your AI models through the KINEVA pipeline.
 
