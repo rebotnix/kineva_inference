@@ -101,7 +101,7 @@ wget -P venv/lib/python3.10/site-packages/tensorrt https://docs.rebotnix.com/dow
 Now install requirements:
 
 ```bash
-pip install -r requirements.txt
+pip install --no-build-isolation -r requirements.txt
 ```
 
 To run the SDK the following prerequisites need to be installed **with GPU support**:
