@@ -20,7 +20,7 @@ KINEVA offers a curated suite of **8 high-performance, production-ready AI model
 
 From **object detection** and **defect inspection** to **traffic sign recognition** and **license plate localization**, each model is fully optimized for real-time inference on **NVIDIA Jetson** hardware.
 
-KINEVA uses two different network architectures: AF and KD. The only difference between AF and KD is the backbone. The difference between the silver and gold versions lies in the number of parameters the model was trained with, as well as differences in the model architecture and input height. For testing we also trained some models with detectron, just for comparision. KINEVA uses two network architectures: AF and KD. The only difference between them is the backbone. The difference between silver and gold models lies in the number of parameters, the model architecture, and the input height used during training.
+KINEVA uses two different network architectures: AF and KD. The only difference between AF and KD is the backbone. The difference between the silver and gold versions lies in the number of parameters the model was trained with, as well as differences in the model architecture and input height. For testing we also trained some models with detectron, just for comparision. 
 
 KINEVA GOLD AF has 80 million parameters.  
 KINEVA SILVER AF has 9.52 Million parameters.
