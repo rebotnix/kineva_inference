@@ -20,9 +20,17 @@ KINEVA offers a curated suite of **8 high-performance, production-ready AI model
 
 From **object detection** and **defect inspection** to **traffic sign recognition** and **license plate localization**, each model is fully optimized for real-time inference on **NVIDIA Jetson** hardware.
 
+KINEVA uses two different network architectures: AF and KD. The only difference between AF and KD is the backbone. The difference between the silver and gold versions lies in the number of parameters the model was trained with, as well as differences in the model architecture and input height. For testing we also trained some models with detectron, just for comparision. KINEVA uses two network architectures: AF and KD. The only difference between them is the backbone. The difference between silver and gold models lies in the number of parameters, the model architecture, and the input height used during training.
+
+KINEVA GOLD AF has 80 million parameters.
+KINEVA SILVER AF has 9.52 Million parameters.
+
+
 | Model Name             | Model Type | Detection Type | Description                                                                                       | Example Output                                              |
 | ---------------------- | --- | --- |------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [rb_coco](https://huggingface.co/rebotnix/rb_coco)        |  KINEVA GOLD  |  Object Detection     | General-purpose object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)                           |
+| [rb_coco](https://huggingface.co/rebotnix/rb_coco)        |  KINEVA GOLD AF  |  Object Detection     | Object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)        
+| [rb_coco](https://huggingface.co/rebotnix/rb_coco)        |  KINEVA SILVER AF  |  Object Detection     | Object detection based on COCO classes (people, vehicles, etc.)                   | ![rb\_coco](assets/rb_coco.jpg)   
+|
 | [rb_trafficsign](https://huggingface.co/rebotnix/rb_trafficsign)      |  RF-DETR  |  Object Detection   | Detection and classification of traffic signs                                                     | ![rb\_trafficsign](assets/rb_trafficsign.jpg)             |
 | [rb_productInspection](https://huggingface.co/rebotnix/rb_productInspection) |  RF-DETR  |  Object Detection | Visual quality control and anomaly detection in product assembly lines                            | ![rb\_productInspection](assets/rb_productInspection.jpg) |
 | [rb_licenseplate](https://huggingface.co/rebotnix/rb_licenseplate)   |  RF-DETR  |  Object Detection   | License plate detection and OCR-ready localization                                                | ![rb\_licenseplate](assets/rb_licenseplate.jpg)           |
