@@ -30,8 +30,8 @@ KINEVA SILVER AF has 9.52 Million parameters.
 
 | Model Name                                                                 | Model Type        | Detection Type    | Description                                                                                       | Example Output                                |
 |----------------------------------------------------------------------------|-------------------|-------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [rb_coco](https://huggingface.co/rebotnix/rb_coco)                         | KINEVA GOLD AF    | Object Detection  | Object detection based on COCO classes (people, vehicles, etc.)                                   | [<img src="assets/rb_coco.jpg" alt="rb_coco" width="200"/>](https://huggingface.co/rebotnix/rb_coco) |
-| [rb_coco](https://huggingface.co/rebotnix/rb_coco)                         | KINEVA SILVER AF  | Object Detection  | Object detection based on COCO classes (people, vehicles, etc.)                                   | [<img src="assets/rb_coco.jpg" alt="rb_coco" width="200"/>](https://huggingface.co/rebotnix/rb_coco) |
+| [KINEVA COCO](https://huggingface.co/rebotnix/rb_coco)                         | GOLD AF    | Object Detection 80M PARAMS | Object detection based on COCO classes (people, vehicles, etc.)                                   | [<img src="assets/rb_coco.jpg" alt="rb_coco" width="200"/>](https://huggingface.co/rebotnix/rb_coco) |
+| [KINEVA COCO](https://huggingface.co/rebotnix/rb_coco)                         | SILVER AF  | Object Detection 9M PARAMS | Object detection based on COCO classes (people, vehicles, etc.)                                   | [<img src="assets/rb_coco.jpg" alt="rb_coco" width="200"/>](https://huggingface.co/rebotnix/rb_coco) |
 
 ## RF-DETR Models
 
